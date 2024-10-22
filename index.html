@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel Books</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+    .cabeçalho {
+      background-color: #ff0000; /* Vermelho da Marvel */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .container__titulo {
+      color: #fff;
+      font-size: 2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    .carrossel__titulo {
+      color: #ffcc00; /* Amarelo da Marvel */
+      text-align: center;
+      margin: 20px 0;
+    }
+    .banner {
+      background: url('img/marvel-banner.jpg') no-repeat center center / cover;
+      padding: 50px;
+      text-align: center;
+      color: #fff;
+    }
+    .banner__pesquisa {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 300px;
+    }
+    .rodapé {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+    }
+    .rodapé__titulo {
+      color: #ffcc00;
+    }
+    .swiper-slide {
+      position: relative;
+      text-align: center;
+    }
+    .swiper-slide img {
+      width: 40%; /* Aumenta um pouco as imagens */
+      height: auto; /* Mantém a proporção da imagem */
+    }
+    .titulo-livro {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="cabeçalho">
+    <div class="container">
+      <img src="download (5).jpg" alt="Logo da Marvel Books" class="container__imagem" />
+      <h1 class="container__titulo"><b>Marvel</b>Books</h1>
+      <nav>
+        <ul class="opções">
+          <li><a href="#" class="opções__link">Quadrinhos</a></li>
+          <li><a href="#" class="opções__link">Filmes</a></li>
+          <li><a href="#" class="opções__link">Personagens</a></li>
+          <li><a href="#" class="opções__link">Mercadorias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h2 class="banner__titulo">Bem-vindo à Marvel Books!</h2>
+    <p class="banner__texto">Descubra o universo de super-heróis e histórias!</p>
+    <input type="search" class="banner__pesquisa" placeholder="O que você vai ler a seguir?">
+  </section>
+
+  <section class="carrossel">
+    <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="download (4).jpg" alt="Quadrinho do Homem-Aranha">
+          <div class="titulo-livro">Homem-Aranha</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="download (1).jpg" alt="Quadrinho do Homem de Ferro">
+          <div class="titulo-livro">Homem de Ferro</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="download (2).jpg" alt="Quadrinho do Thor">
+          <div class="titulo-livro">Thor</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="download (3).jpg" alt="Quadrinho do Capitão América">
+          <div class="titulo-livro">Capitão América</div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <footer class="rodapé">
+    <h2 class="rodapé__titulo">Universo Marvel</h2>
+    <ul class="lista-rodapé">
+      <li><a href="#" class="lista-rodapé__link">Quadrinhos</a></li>
+      <li><a href="#" class="lista-rodapé__link">Filmes</a></li>
+      <li><a href="#" class="lista-rodapé__link">Séries de TV</a></li>
+      <li><a href="#" class="lista-rodapé__link">Personagens</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+    });
+  </script>
+</body>
+
+</html>
